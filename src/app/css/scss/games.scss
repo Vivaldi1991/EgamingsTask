@@ -1,0 +1,112 @@
+//games
+
+.game {
+    display: inline-block;
+    margin: 10px;
+    background-color: #585754;
+    color: white;
+    height: 200px;
+    width: 200px;
+    vertical-align: top;
+    text-align: center;
+    border-radius: 5px;
+    font-weight: bold;
+    padding-top: 10px;
+}
+
+.game-image {
+    max-height: 200px;
+    max-width: 200px;
+    opacity: 1;
+    display: block;
+    transition: .5s ease;
+}
+
+.game:hover .game-image {
+    opacity: 0.3;
+}
+
+.game:hover .middle {
+    opacity: 1;
+}
+
+.fav_game {
+    display: inline-block;
+    margin: 10px;
+    background-color: #fde773;
+    color: black;
+    height: 200px;
+    width: 200px;
+    vertical-align: top;
+    text-align: center;
+    border-radius: 5px;
+    font-weight: bold;
+    padding-top: 10px;
+
+}
+
+.fav_game:hover .game-image {
+    opacity: 0.3;
+}
+
+.fav_game:hover .middle {
+    opacity: 1;
+}
+
+
+.priority_game:hover .priority-game-image {
+    opacity: 0.3;
+}
+
+.priority_game:hover .middle {
+    opacity: 1;
+}
+
+.middle {
+    transition: .5s ease;
+    opacity: 0;
+    text-align: center;
+}
+
+
+
+.priority_game {
+    display: inline-block;
+
+}
+
+.priority-game-image {
+    width: 250px;
+}
+
+.priority_block {
+    text-align: center;
+}
+
+.game-btn {
+    position: relative;
+    top: -100px;
+    left: 7%;
+    text-align: center;
+    padding: 5px;
+    width: 80%;
+    cursor: pointer;
+    margin-bottom: 5px;
+    background-color: #4CAF50;
+    color: white;
+}
+
+.game-btn-remove {
+    position: relative;
+    top: -100px;
+    left: 7%;
+    text-align: center;
+    padding: 5px;
+    width: 80%;
+    cursor: pointer;
+    margin-bottom: 5px;
+    background-color: rgb(175, 76, 76);
+    color: white;
+}
+
+

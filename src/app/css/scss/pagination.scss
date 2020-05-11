@@ -1,0 +1,31 @@
+@import "ordering.scss";
+//pagination
+.pagination {
+    color: white;
+    text-align: center;
+    margin-top: 2%;
+}
+
+.page {
+    display: inline-block;
+    margin: 5px;
+}
+
+.page_size {
+    display: inline-block;
+    margin: 5px;
+    cursor: pointer;
+}
+.page_block {
+    display: inline-block;
+    float: left;
+    color: white;
+    background-color: grey;
+
+}
+
+.page_limit {
+    display: inline-block;
+    float: right;
+    margin-right: 5%;
+}

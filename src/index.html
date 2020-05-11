@@ -9,7 +9,7 @@
 </head>
 
 <body ng-controller="appController">
-    <div id="nav_bar">
+    <div class="nav_bar">
         <div class="nav_categories">
             <div ng-repeat="category in categories" class="category" ng-click="setCategory(category.ID)">
                 {{category.Name.en}}
@@ -32,7 +32,7 @@
             </div>
         </div>
     </div>
-    <div id="content">
+    <div class="content">
         
         <div class="pagination">
             <button ng-disabled="currentPage == 0" ng-click="currentPage=currentPage-1">
@@ -43,7 +43,7 @@
                 Next
             </button>
     
-            <div id="order_by">
+            <div class="order_by">
                 <div class="page_block">
                     <div class="page">Total games: {{totalGames.length + $storage.favorites.length}}
                     </div>

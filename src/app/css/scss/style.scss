@@ -1,17 +1,16 @@
 
+$body_bg: #282927;
+$document_fonts: Geneva,Arial,Helvetica,sans-serif;
 
-$ms_bg: #000000;
-$mb_bg: #14213D;
-$nb_bg: #FCA311;
+@import "navigationBar.scss";
+@import "content.scss";
+@import "pagination.scss";
+@import "button.scss";
+@import "games.scss"; 
 
-#main_section{
-    background-color:$ms_bg;
+body {
+    background-color: $body_bg;
+    margin: 0;
+    padding: 0;
+    font-family: $document_fonts;
 }
-
-#main_block{
-    background-color:$mb_bg;
-}
-
-#nav_bar{
-    background-color:$nb_bg;
-} 

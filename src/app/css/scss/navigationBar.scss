@@ -1,0 +1,40 @@
+//navigation bar
+.nav_bar {
+    background-color: #e0e0e0;
+    height: 7%;
+    position: relative;
+    font-size: large;
+    padding: 10px;
+}
+
+.category {
+    display: inline;
+    margin: 7px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.category:hover {
+    text-decoration: underline;
+}
+
+.nav_filters {
+    display: inline-block;
+    margin-left: 100px;
+}
+
+.nav_categories {
+    display: inline-block;
+}
+
+.selectedMerchant,
+.searchFilter {
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    height: 3rem;
+}

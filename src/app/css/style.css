@@ -1,214 +1,187 @@
-body{
-    background-color: #282927; 
-    margin: 0;
-    padding: 0;
-    font-family: Geneva, Arial, Helvetica, sans-serif;;
-}
-
-#nav_bar { 
+.nav_bar {
   background-color: #e0e0e0;
   height: 7%;
   position: relative;
   font-size: large;
-  padding: 10px;
-}
-#content{
-    display: block;
-    margin-left: 7%;
-    margin-right: 7%;
-}
+  padding: 10px; }
 
-.category{
-    display: inline;
-    margin: 7px;
-    font-size: 16px;
-    cursor: pointer;
-    font-weight: bold;
-}
-.category:hover{
-    text-decoration: underline;
-}
+.category {
+  display: inline;
+  margin: 7px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: bold; }
 
-#paginator{
-    display: block;
-    margin: 0%;
+.category:hover {
+  text-decoration: underline; }
 
-}
+.nav_filters {
+  display: inline-block;
+  margin-left: 100px; }
 
-.nav_filters{
-    display: inline-block;
-    margin-left: 100px;
-}
+.nav_categories {
+  display: inline-block; }
 
-.nav_categories{
-    display: inline-block;
-}
+.selectedMerchant,
+.searchFilter {
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  height: 3rem; }
+
+.content {
+  display: block;
+  margin-left: 7%;
+  margin-right: 7%; }
+
+.order_by {
+  text-align: right;
+  margin-left: 2%; }
+
+.order_by_str {
+  display: inline-block;
+  color: white;
+  padding: 5px;
+  margin-right: 6%;
+  cursor: pointer; }
+
+.pagination {
+  color: white;
+  text-align: center;
+  margin-top: 2%; }
+
+.page {
+  display: inline-block;
+  margin: 5px; }
+
+.page_size {
+  display: inline-block;
+  margin: 5px;
+  cursor: pointer; }
+
+.page_block {
+  display: inline-block;
+  float: left;
+  color: white;
+  background-color: grey; }
+
+.page_limit {
+  display: inline-block;
+  float: right;
+  margin-right: 5%; }
+
 button {
-    background-color: #4CAF50;
-    border: none;
-    color: white;
-    padding: 10px 25px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-  }
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer; }
 
 button:disabled,
-button[disabled]{
+button[disabled] {
   border: 1px solid #999999;
   background-color: #cccccc;
-  color: #666666;
-}
+  color: #666666; }
 
-.pagination{
-    color:white;
-    text-align: center;
-    margin-top: 2%;
-}
-.page{
-    display: inline-block;
-    margin: 5px;
-}
+.game {
+  display: inline-block;
+  margin: 10px;
+  background-color: #585754;
+  color: white;
+  height: 200px;
+  width: 200px;
+  vertical-align: top;
+  text-align: center;
+  border-radius: 5px;
+  font-weight: bold;
+  padding-top: 10px; }
 
-.page_size{
-    display: inline-block;
-    margin: 5px;
-    cursor: pointer;
-}
-#order_by{
-    text-align: right;
-    margin-left: 2%;
-}
-.order_by_str{
-    display: inline-block;
-    color: white;
-    padding: 5px;
-    margin-right: 6%;
-    cursor: pointer;
+.game-image {
+  max-height: 200px;
+  max-width: 200px;
+  opacity: 1;
+  display: block;
+  transition: .5s ease; }
 
-}
-.game{
-    display: inline-block;
-    margin: 10px;
-    background-color: #585754;
-    color: white;
-    height: 200px;
-    width: 200px;
-    vertical-align: top;
-    text-align: center;
-    border-radius: 5px;
-    font-weight: bold;
-    padding-top: 10px;
-
-}
-
-.fav_game{
-    display: inline-block;
-    margin: 10px;
-    background-color: #fde773;
-    color: black;
-    height: 200px;
-    width: 200px;
-    vertical-align: top;
-    text-align: center;
-    border-radius: 5px;
-    font-weight: bold;
-    padding-top: 10px;
-
-}
-.fav_game:hover .game-image {
-    opacity: 0.3;
-  }
-  
-  .fav_game:hover .middle {
-    opacity: 1;
-  }
 .game:hover .game-image {
-    opacity: 0.3;
-  }
-  
-  .game:hover .middle {
-    opacity: 1;
-  }
+  opacity: 0.3; }
+
+.game:hover .middle {
+  opacity: 1; }
+
+.fav_game {
+  display: inline-block;
+  margin: 10px;
+  background-color: #fde773;
+  color: black;
+  height: 200px;
+  width: 200px;
+  vertical-align: top;
+  text-align: center;
+  border-radius: 5px;
+  font-weight: bold;
+  padding-top: 10px; }
+
+.fav_game:hover .game-image {
+  opacity: 0.3; }
+
+.fav_game:hover .middle {
+  opacity: 1; }
 
 .priority_game:hover .priority-game-image {
-    opacity: 0.3;
-  }
-  
-  .priority_game:hover .middle {
-    opacity: 1;
-  }  
+  opacity: 0.3; }
+
+.priority_game:hover .middle {
+  opacity: 1; }
+
 .middle {
-    transition: .5s ease;
-    opacity: 0;
-    text-align: center;
-  }
+  transition: .5s ease;
+  opacity: 0;
+  text-align: center; }
 
+.priority_game {
+  display: inline-block; }
 
-.game-image{
-    max-height: 200px;
-    max-width: 200px;
-    opacity: 1;
-    display: block;
-    transition: .5s ease;
-}
-.priority_game{
-    display: inline-block;
+.priority-game-image {
+  width: 250px; }
 
-}
-.priority-game-image{
-    width: 250px;
-}
-.priority_block{
-    text-align: center;
-}
-.game-btn{
-    position: relative;
-    top: -100px;
-    left: 7%;
-    text-align: center;
-    padding: 5px;
-    width: 80%;
-    cursor: pointer;
-    margin-bottom: 5px;
-    background-color: #4CAF50;
-    color: white;
-}
-.game-btn-remove{
-    position: relative;
-    top: -100px;
-    left: 7%;
-    text-align: center;
-    padding: 5px;
-    width: 80%;
-    cursor: pointer;
-    margin-bottom: 5px;
-    background-color: rgb(175, 76, 76);
-    color: white;
-}
-.page_block{
-    display: inline-block;
-    float: left;
-    color: white;
-    background-color: grey;
+.priority_block {
+  text-align: center; }
 
-}
+.game-btn {
+  position: relative;
+  top: -100px;
+  left: 7%;
+  text-align: center;
+  padding: 5px;
+  width: 80%;
+  cursor: pointer;
+  margin-bottom: 5px;
+  background-color: #4CAF50;
+  color: white; }
 
-.page_limit{
-    display: inline-block;
-    float: right;
-    margin-right: 5%;
-}
+.game-btn-remove {
+  position: relative;
+  top: -100px;
+  left: 7%;
+  text-align: center;
+  padding: 5px;
+  width: 80%;
+  cursor: pointer;
+  margin-bottom: 5px;
+  background-color: #af4c4c;
+  color: white; }
 
-.selectedMerchant, .searchFilter{
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    height: 3rem;
-  }
+body {
+  background-color: #282927;
+  margin: 0;
+  padding: 0;
+  font-family: Geneva, Arial, Helvetica, sans-serif; }
