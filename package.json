@@ -1,0 +1,31 @@
+{
+  "name": "egamingsTask",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rimraf dist && webpack --bail --progress --profile",
+    "server": "webpack-dev-server --history-api-fallback --inline --progress --open --watch",
+    "start": "npm run server",
+    "scss": "node-sass src/app/css/scss/style.scss src/app/css/style.css -w"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.7.9",
+    "angular-bootstrap": "^0.12.2",
+    "angular-ui-bootstrap": "^2.5.6",
+    "bootstrap": "^4.4.1",
+    "ng-storage": "^0.3.2",
+    "node-sass": "^4.14.1"
+  },
+  "devDependencies": {
+    "html-webpack-plugin": "^4.3.0",
+    "rimraf": "^3.0.2",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.11.0"
+  }
+}

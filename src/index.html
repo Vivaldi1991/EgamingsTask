@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html ng-app="mainApp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E.Gamings task</title>
+    <link rel="stylesheet" href="src/app/css/style.css">
+</head>
+
+<body ng-controller="appController">
+    <div id="nav_bar">
+        <div class="nav_categories">
+            <div ng-repeat="category in categories" class="category" ng-click="setCategory(category.ID)">
+                {{category.Name.en}}
+            </div>
+        </div>
+        <div class="nav_filters">
+            <input placeholder="Search for games" type="text" class="searchFilter" ng-model="query" ng-change="toBegin()">
+            <select class="selectedMerchant" ng-model="selectedMerchant" ng-options="x.Name for x in merchants"
+                ng-change="toBegin()">
+                <option value="">Select merchant</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="priority_block">
+        <div ng-repeat="game in priorityGame" class="priority_game">
+            <img class="priority-game-image" data-ng-src={{game.ImageFullPath}} alt="" src="{{game.ImageFullPath}}">
+            <div class="middle">
+                <div class="game-btn">Play</div>
+            </div>
+        </div>
+    </div>
+    <div id="content">
+        
+        <div class="pagination">
+            <button ng-disabled="currentPage == 0" ng-click="currentPage=currentPage-1">
+                Previous
+            </button>
+            {{currentPage+1}}/{{numberOfPages()}}
+            <button ng-disabled="currentPage + 1 >= numberOfPages() " ng-click="currentPage=currentPage+1">
+                Next
+            </button>
+    
+            <div id="order_by">
+                <div class="page_block">
+                    <div class="page">Total games: {{totalGames.length + $storage.favorites.length}}
+                    </div>
+                    <div class="page">Found games: {{filterGames.length}}
+                    </div>
+
+                </div>            
+                <div class="page_limit">
+                    Games on page:
+                    <div class="page_size" ng-click="setLimitPage(5)"><u>5</u></div>
+                    <div class="page_size" ng-click="setLimitPage(10)"><u>10</u></div>
+                    <div class="page_size" ng-click="setLimitPage(20)"><u>20</u></div>
+                </div>
+                <div class="order_by_str" ng-click="sort('Name.en')">Order by name: {{sortDirection}} 
+                </div>
+            </div>
+        </div>
+        
+        <div ng-repeat="favgame in $storage.favorites | orderBy:sortField:reverse" class="fav_game">
+                {{favgame.Name.en}}
+                <img class="game-image" data-ng-src={{favgame.ImageFullPath}} alt="" src="{{favgame.ImageFullPath}}">
+                <div class="middle">
+                    <div class="game-btn">Play</div>
+                    <div class="game-btn-remove" ng-click="removeFromFavorites(favgame)">Remove</div>
+                </div>
+        </div>
+        <div ng-repeat="game in filterGames = (totalGames | 
+                                               orderBy:sortField:reverse | 
+                                               filter: { Name: { en: query }, MerchantID: selectedMerchant.ID , CategoryID: categoryID}) | 
+                                               startFrom:currentPage*pageSize | 
+                                               limitTo:pageSize" class="game">
+            {{game.Name.en}}
+            <img class="game-image" data-ng-src={{game.ImageFullPath}} alt="" src="{{game.ImageFullPath}}">
+            <div class="middle">
+                <div class="game-btn">Play</div>
+                <div class="game-btn" ng-click="addToFavorites(game)">To favourites</div>
+            </div>
+        </div>
+
+    </div>
+    <script src="../node_modules/angular/angular.js"></script>
+    <script src="../node_modules/ng-storage/ngStorage.js"></script>
+</body>
+
+</html>
